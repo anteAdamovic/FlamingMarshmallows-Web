@@ -1,0 +1,41 @@
+<div class='header'>
+
+  <div class='header-logo'>
+    
+    <div class='home-link'>
+      <a (click)='redirectToHome()'> Home </a>
+    </div>
+
+  </div>
+
+  <div class='header-status'>
+
+    <div class='not-logged-in' *ngIf='loggedInStatus == false'>
+
+      <div class='login-link'>
+        <a (click)='redirectToLogin()'> Login </a>
+      </div>
+
+      <div class='separator'> | </div>
+
+      <div class='register-link'>
+        <a (click)='redirectToRegister()'> Register </a>
+      </div>
+
+    </div>
+
+    <div class='logged-in' *ngIf='loggedInStatus == true'>
+      
+      <div class='username'>{{username}}</div>
+      
+      <div class='separator'> | </div>
+
+      <div class='logout-link'>
+        <a (click)='redirectToLogout()'> Logout </a>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

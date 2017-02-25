@@ -1,0 +1,17 @@
+.login form{
+    display: inline-block;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.username, .password, .submit {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin: 5px auto;
+}
+
+.submit {
+    padding: 7px 28px;
+    cursor: pointer;
+}

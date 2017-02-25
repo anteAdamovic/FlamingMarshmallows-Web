@@ -1,0 +1,26 @@
+.header {
+  width: 100%;
+  clear: both;
+}
+
+/* Status */
+
+.header-status {
+  float: right;
+}
+
+.header-status div {
+  display: inline-block;
+}
+
+.login-link, .register-link, .logout-link, .home-link {
+  cursor: pointer;
+  text-decoration: underline;
+  color: darkgreen;
+}
+
+/* Logo */
+
+.header-logo {
+  float: left;
+}

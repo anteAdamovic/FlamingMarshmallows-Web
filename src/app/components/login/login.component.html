@@ -1,0 +1,19 @@
+<div class='login'>
+
+    <form class='login-form' (ngSubmit)='login()'>
+
+        <div class='username'>
+            <label> Username </label>
+            <input type='text' name='username' [(ngModel)]='user.username'>
+        </div>
+
+        <div class='password'>
+            <label> Password </label>
+            <input type='password' name='password' [(ngModel)]='user.password'>
+        </div>
+
+        <button class='submit' type='submit' [disabled]='!user.username || !user.password'> Login </button>
+
+    </form>
+
+</div>
