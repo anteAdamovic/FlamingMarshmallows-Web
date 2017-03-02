@@ -13,10 +13,7 @@ export class LoginService {
     let body = JSON.stringify(user);
     console.log('loginservice', body);
     return this.http.post(this.loginURL, body)
-                    .map((res: any) => {
-                      let response = JSON.parse(res._body.substring(res._body.indexOf('{'), res._body.length));
-                      return response;
-                    })
+                    .map((res: any) => JSON.parse(res._body.substring(res._body.indexOf('{'), res._body.length)))
                     .catch((error: any) => {console.error(error); return Observable.throw(error); });
   }
 

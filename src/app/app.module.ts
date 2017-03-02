@@ -4,9 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
-import { FMRouter } from './utilities/router/fm-router'
+import { appRoutes } from './utilities/appRoutes';
 
 import { LoginService } from './services/login/login.service';
+import { RegisterService } from './services/register/register.service';
 import { EventService } from './services/event/event.service';
 
 import { AppComponent } from './app.component';
@@ -37,9 +38,9 @@ import { UnauthorizedComponent } from './components/unauthorized/unauthorized.co
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(FMRouter.routes)
+    RouterModule.forRoot(appRoutes)
   ],
-  providers: [LoginService, EventService],
+  providers: [LoginService, RegisterService, EventService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
